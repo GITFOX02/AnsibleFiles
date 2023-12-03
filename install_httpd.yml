@@ -1,0 +1,14 @@
+---
+- name: This is my playboook
+  hosts: all
+  become: true
+  tasks:
+  - name: Install httpd
+    yum:
+      name: httpd
+      state: installed
+
+  - name: httpd service started
+    service:
+      name: httpd
+      state: started

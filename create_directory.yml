@@ -1,0 +1,9 @@
+---
+- name: This test playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: Creating a directory
+    file:
+      path: /home/fox/testdir
+      state: directory

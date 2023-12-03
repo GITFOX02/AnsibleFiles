@@ -1,0 +1,7 @@
+---
+- name: This is playbook create a user
+  hosts: all
+  become: true
+  tasks:
+  - name: creating a user
+    user: name=kanish

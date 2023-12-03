@@ -1,0 +1,11 @@
+---
+- name: This is my playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: copy to index file
+    copy:
+      src: /home/fox/index.html
+      dest: /home/fox
+      mode: 0600
+      owner: kanish

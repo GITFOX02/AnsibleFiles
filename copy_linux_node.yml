@@ -1,0 +1,10 @@
+---
+- name: this is my playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: copy a file
+    copy: 
+      src: /home/fox/index.html
+      dest: /var/www/html
+      mode: 0666

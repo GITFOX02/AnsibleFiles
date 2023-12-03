@@ -1,0 +1,9 @@
+---
+- name: Create a file.
+  hosts: all
+  become: true
+  tasks:
+  - name: Create a one file in all node servers
+    file:
+      path: /home/fox/test1
+      state: touch

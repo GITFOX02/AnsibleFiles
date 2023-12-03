@@ -1,0 +1,10 @@
+---
+- name: This is my playbook.
+  hosts: all
+  become: true
+  tasks:
+  - name: Create a multiple user
+    user: name='{{item}}' state=present
+    with_items:
+     -anish
+     -jaya

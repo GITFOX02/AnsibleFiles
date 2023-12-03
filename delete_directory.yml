@@ -1,0 +1,9 @@
+---
+- name: This my test playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: Deleting a directory
+    file:
+      path: /home/fox/testdir
+      state: absent

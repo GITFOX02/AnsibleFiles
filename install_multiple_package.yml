@@ -1,0 +1,9 @@
+---
+- name: This is my playbook
+  hosts: all 
+  become: true
+  tasks:
+  - name: Install multipel package
+    yum:
+      name: ['git', 'make', 'gcc', 'wget', 'telnet', 'tree', 'which', 'docker*']
+      state: installed
